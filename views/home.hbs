@@ -1,0 +1,106 @@
+<!-- section for picture -->
+
+
+<div class="container-fluid" style="margin-bottom:-14px">
+    <div class="row align-items-center" style="background-image: url('/images/background.png')">
+        <div class="col-md-5">
+            <div class="p-5">
+                <img class="img-fluid rounded-circle" src="/images/me.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-7 ">
+            <div class="p-1">
+                <h2 class="display-4">Hi! I am Mirza Talha</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquio veniam sit iste esse
+                    assumentione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- section for picture -->
+
+
+<div style="background-color:rgb(191, 243, 243)">
+    <hr>
+    <div class="container">
+        <div class="row no-padding">
+            <div class="col-md-9">
+                <h1 class="responsive-headline">Recent Projects</h1>
+            </div>
+            <div class="col-md-3 text-right">
+                <button class="btn btn-warning">
+                    <h4><a href="/projects">View All</a></h4>
+                </button>
+            </div>
+        </div>
+        <div class="row no-padding">
+            {{#each projects}}
+            <div class="col-md-4 mt-4 mb-4">
+                <div class="card">
+                    <a href="/projects/{{_id}}"><img class="card-img-top" src="{{this.image}}" alt=""
+                            height="250px" /></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/projects/{{_id}}">{{this.title}}</a>
+                        </h4>
+                        <p class="card-text">
+                            {{this.description}}
+                        </p>
+                        <a class="btn btn-primary" href="/projects/{{_id}}">View Project
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                        <a class="btn btn-primary" href="#">Github
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+
+        <hr>
+        <!-- Recent Blog Posts -->
+        <div>
+            <div class="row no-padding">
+                <div class="col-md-9">
+                    <h1 class="responsive-headline">Recent Blog Posts</h1>
+                </div>
+                <div class="col-md-3 text-right">
+                    <button class="btn btn-warning">
+                        <h4><a href="/blog"> View All </a></h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-padding">
+            {{#each blogs}}
+            <div class="col-md-4 mt-4 mb-4">
+                <div class="card">
+                    <a href="/projects/{{_id}}"><img class="card-img-top" src="{{this.imagetwo}}" alt=""
+                            height="250px" /></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/projects/{{_id}}">{{this.nametwo}}</a>
+                        </h4>
+                        <p class="card-text">
+                            {{this.paratwo}}
+                        </p>
+                        <a class="btn btn-primary" href="/projects/{{_id}}">View Post
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            <hr>
+
+        </div>
+        
+    </div>
+</div>
